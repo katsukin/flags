@@ -1,0 +1,14 @@
+<% unless params[:preview_button] %>
+<h2>Edit Post</h2>
+<% end %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to '[削除]',
+  post_path(@post),
+  method: :delete,
+  class: 'command',
+  data: {confirm: '本当に消していい？' } %>
+  <%= link_to '[一覧へ戻る]', root_path, class: 'command' %>
+</p>

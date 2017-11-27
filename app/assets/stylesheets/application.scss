@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*
+  @import "froala_editor.min.css";
+  @import "froala_style.min.css";
+  @import "font-awesome-sprockets";
+  @import "font-awesome";
+  */
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  body {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bootom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  ul > li {
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    width: 100px;
+    hight: 100px;
+  }
+
+  .header-menu {
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+  }
+
+  input[type="text"],textarea {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 5px;
+  }
+
+  textarea {
+    height: 160px;
+  }
+
+  .error {
+    font-size: 12px;
+    font-weight: bold;
+    color: tomato;
+  }
+
+  .command {
+    font-size: 12px;
+    float: right;
+
+  }
+
+  .preview {
+    margin-bottom: 100px
+  }
+
+  h3{
+    font-size: 14px;
+    padding-top: 50px;
+  }

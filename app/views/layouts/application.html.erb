@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nekoblog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
+  </ul>
+</div>
+    <div class="container">
+      <% if flash[:notice] %>
+       <div class="alert alert-success">
+         <%= flash[:notice] %>
+       </div>
+      <% end %>
+      <h1><%= link_to image_tag('neko.jpg', class: 'logo'), root_path %></h1>
+      <%= yield %>
+    </div>
+  </body>
+</html>

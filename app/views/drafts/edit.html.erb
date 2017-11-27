@@ -1,0 +1,24 @@
+<h2>Edit Post in Draft</h2>
+<% if params[:preview_button] %>
+<p>※プレビュー</p>
+  <div class="preview">
+    <div class="title">
+      <h2><%= @draft.title %></h2>
+    </div>
+
+    <div class="content">
+      <%= simple_format @draft.body %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_for @draft do |f| %>
+<p><%= f.text_field :title %></p>
+<p><%= f.text_area :body %></p>
+<p>
+  <%= f.submit "SailingShip" ,name: "release_button"%>
+  <%= submit_tag "Periscope", name: "preview_button" %>
+  <%= submit_tag "Submarine", name: "draft_button" %>
+</p>
+
+<% end %>

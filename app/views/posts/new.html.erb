@@ -1,0 +1,9 @@
+<% unless params[:preview_button] %>
+<h2>Add New Post</h2>
+<% end %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to '[一覧へ戻る]', root_path, class: 'command' %>
+</p>

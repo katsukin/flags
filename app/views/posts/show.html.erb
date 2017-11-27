@@ -1,0 +1,37 @@
+<h2>
+  <%= @post.title %>
+</h2>
+<p><%= simple_format @post.body %></p>
+<p>
+  <%= link_to '[編集]', edit_post_path(@post), class: 'command' %>
+  <%= link_to '[削除]',
+  post_path(@post),
+  method: :delete,
+  class: 'command',
+  data: {confirm: '消していいと？' } %>
+  <%= link_to '[一覧へ戻る]', root_path, class: 'command' %>
+</p>
+
+<h3>Comments</h3>
+<ul>
+  <% @post.comments.each do |comment| %>
+  <li>
+    <%= comment.body %>
+    <%= link_to '[削除]',
+    post_comment_path(@post, comment),
+    method: :delete,
+    class: 'command',
+    data: {confirm: '消していいと？' } %>
+
+  </li>
+  <% end %>
+</ul>
+
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit "投稿" ,name: "release_button"%>
+  </p>
+<% end %>

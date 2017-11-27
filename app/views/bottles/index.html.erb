@@ -1,0 +1,17 @@
+
+<h2>Cabinet</h2>
+<div class="bottles">
+<% @bottles.each do |bottle|%>
+<div class="pic">
+  <%= bottle.cabinet %>
+    <% case  bottle.pic_type
+    when "image" %>
+    <%= link_to image_tag(bottle.pic_url, class: 'links') ,bottle.url %>
+    <% when "video" %>
+    <iframe class="links" src='<%= bottle.pic_url %>' frameborder="0" allowfullscreen></iframe>
+    <% end %>
+  <%= bottle.user_id %>
+  <%= bottle.comment %>
+</div>
+<% end %>
+</div>
